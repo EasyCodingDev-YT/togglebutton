@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="body">
+    <div>
+        <button class="togglebtn">
+            <input type="checkbox" id="togglecheck" hidden>
+            <label for="togglecheck" class="togglelable" id="togglelabel">
+                <div class="togglebg">
+                    <div class="toggleicn"></div>
+                </div>
+            </label>
+            <div class="title">
+                <p class="p1">Night</p>
+                <p class="p2">Day</p>
+            </div>
+        </button>
+        
+    </div>
+<script>
+    document.getElementById('togglelabel').addEventListener('click',function(){
+        document.getElementById('body').classList.toggle('dark')
+    })
+</script>
+</body>
+
+</html>

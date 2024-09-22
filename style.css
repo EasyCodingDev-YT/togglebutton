@@ -1,0 +1,186 @@
+body {
+    height: 100vh;
+    background: 
+    linear-gradient(to right, #e89e5e, #e4bf50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.togglebtn {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    /* SMALLER SIZE */
+    /* width: 50px;
+    height: 20px; */
+ 
+    background-color: transparent;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+}
+.togglelable {
+    width: 50px;
+}
+.toggleicn {
+    /* SMALLER SIZE  */
+    /* width: 18px;
+    height: 18px; */
+
+    width: 90px;
+    height: 96px;
+
+    border-radius: 50%;
+    /* SMALLER SIZE */
+    /* border: 2px solid 
+    rgba(255, 255, 255, 0.697); */
+    border: 3px solid 
+    rgba(255, 255, 255, 0.697);
+    border: blur(10px);
+    position: absolute;
+    animation: off 0.5s linear forwards;
+    box-shadow: 0 4px 6px 
+    rgba(0, 0, 0, 0.2) !important;
+}@keyframes off {
+    0% {
+
+        /* FOR SMALLER SIZE  */
+        /* transform: translateX(28px); */
+        transform: translateX(103px);
+        background: 
+        linear-gradient(to right, #f24af2, #814cf2);
+    }
+
+    1% {
+        background: 
+        linear-gradient(to right, #ff7700, #e8b10d);
+    }
+
+    100% {
+        background: 
+        linear-gradient(to right, #ff7700, #e8b10d);
+    }
+
+}
+
+
+
+#togglecheck:checked~.togglelable {
+    .toggleicn {
+        animation: on .5s linear forwards normal;}
+
+}@keyframes on {
+    0% {
+        background: 
+        linear-gradient(to right, #f2994a, #f2c94c);
+    }
+
+    1% {
+        background: 
+        linear-gradient(to right, #311231, #560bf7);
+    }
+
+    100% {
+        /* FOR SMALLER SIZE */
+        /* transform: translateX(28px); */
+        transform: translateX(103px);
+        background: 
+        linear-gradient(to right, #311231, #560bf7);
+    }
+}
+
+
+
+
+#togglecheck:checked~.togglelable {
+    .togglebg {
+        animation: bgchange 0.5s linear forwards normal;
+    }
+}@keyframes bgchange {
+    from {
+        background: 
+        url(A_desert_landscape_daytime_resized.png) no-repeat;
+    }
+
+    to {
+        background: 
+        url(fwff.png) no-repeat;
+    }
+}
+.togglebg {
+    animation: bgback 0.5s linear forwards reverse;
+    background-size: cover !important;
+    /* SMALLER SIZE */
+    /* width: 50px;
+    height: 21px; */
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    padding: 4% 6%;
+
+}@keyframes bgback {
+    from {
+        background: 
+        url(A_desert_landscape_daytime_resized.png) no-repeat;
+    }
+
+    to {
+        background: 
+        url(fwff.png) no-repeat;
+    }
+}
+
+.dark{
+    background: 
+    #410143;  
+    /* filter: invert(1);
+    img{
+        filter: none !important;
+    } */
+ 
+}
+.title{
+    text-align: center;
+    background: 
+    linear-gradient(to right, #e89e5e, #e4bf50);
+    background-clip:text;
+    color: transparent;
+    filter: invert(1);
+    position: absolute;
+    transform: translateY(-80%);  
+
+
+font-size: xx-large;
+font-weight: bolder;
+
+left: 70px;
+.p1{
+    display: none;
+}
+}
+#togglecheck:checked ~ .title{
+
+    left: 55px;
+    background: 
+    #410143;
+    background-clip:text;
+    color: transparent;  
+    .p1{
+        display: block;
+    }
+    .p2{
+        display: none;
+    }
+}
+
+#tooglecheck:checked ~ * {
+    background: 
+    #b217b8;  
+    filter: invert(1);
+    img{
+        filter: none !important;
+    }
+}
